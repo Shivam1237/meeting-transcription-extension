@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Meeting Transcription",
+  "version": "1.0",
+  "description": "Chrome extension for meeting transcription",
+
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://localhost:5000/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Meeting Transcription"
+  }
+}

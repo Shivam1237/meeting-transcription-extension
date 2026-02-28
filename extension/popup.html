@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meeting Transcription</title>
+
+  <style>
+    body {
+      width: 360px;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 18px;
+      color: #2c3e50;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 48%;
+      padding: 9px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    #startBtn {
+      background-color: #1cc88a;
+      color: white;
+    }
+
+    #startBtn:hover:not(:disabled) {
+      background-color: #17a673;
+      transform: translateY(-2px);
+    }
+
+    #stopBtn {
+      background-color: #e74a3b;
+      color: white;
+    }
+
+    #stopBtn:hover:not(:disabled) {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    /* Disabled button style */
+    button:disabled {
+      background-color: #ccc !important;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+      opacity: 0.7;
+    }
+
+    #transcriptBox {
+      height: 220px;
+      overflow-y: auto;
+      background: #f8f9fc;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #d1d3e2;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #34495e;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    #transcriptBox::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #transcriptBox::-webkit-scrollbar-thumb {
+      background: #4e73df;
+      border-radius: 10px;
+    }
+
+    .speaker {
+      font-weight: bold;
+      color: #4e73df;
+    }
+
+    .status {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 10px;
+      color: #6c757d;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2>Meeting Transcription</h2>
+
+    <div class="button-container">
+      <button id="startBtn">Start Recording</button>
+      <button id="stopBtn">Stop Recording</button>
+    </div>
+
+    <div id="transcriptBox">
+      Transcript will appear here...
+    </div>
+
+    <div class="status">
+      Status: Ready
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
